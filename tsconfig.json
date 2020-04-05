@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "commonjs",
+    "moduleResolution": "node",
+//    "lib": [
+//      "esnext",
+//      "esnext.asynciterable",
+//      "dom"
+//    ],
+    "esModuleInterop": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "paths": {
+      "~/*": ["client/*"]
+    },
+    "types": [
+      "@types/node",
+      "@nuxt/types"
+    ]
+  },
+  "include": [
+    "server/**/*",
+    "client/**/*"
+  ]
+}
