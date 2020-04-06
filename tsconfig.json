@@ -3,11 +3,6 @@
     "target": "es2018",
     "module": "commonjs",
     "moduleResolution": "node",
-//    "lib": [
-//      "esnext",
-//      "esnext.asynciterable",
-//      "dom"
-//    ],
     "esModuleInterop": true,
     "allowJs": true,
     "sourceMap": true,
