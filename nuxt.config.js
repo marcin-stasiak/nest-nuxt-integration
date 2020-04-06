@@ -2,6 +2,7 @@
 export default {
   mode: 'universal',
   srcDir: './client/',
+  buildDir: './dist/client/',
   /*
   ** Headers of the page
   */
