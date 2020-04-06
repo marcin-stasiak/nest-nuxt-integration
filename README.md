@@ -1,6 +1,8 @@
-# nest-nuxt-integration
+<p align="center"><img align="center" style="width:200px" src="https://i.imgur.com/kwbpUvy.png"/></p>
 
-> Nest Nuxt integration
+# Nest.js Nuxt.js integration
+
+> Easy to use [Nest.js](https://nestjs.com/) and [Nuxt.js](https://nuxtjs.org) integration
 
 ## Build Setup
 
@@ -14,9 +16,4 @@ $ npm run dev
 # build for production and launch server
 $ npm run build
 $ npm run start
-
-# generate static project
-$ npm run generate
 ```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
