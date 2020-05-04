@@ -3,16 +3,17 @@
     "target": "es2018",
     "module": "commonjs",
     "moduleResolution": "node",
-    "esModuleInterop": true,
+    "declaration": false,
+    "noLib": false,
     "allowJs": true,
     "sourceMap": true,
+    "removeComments": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "baseUrl": ".",
     "outDir": "./dist",
-    "paths": {
-      "~/*": ["client/*"]
-    },
     "types": [
       "@types/node",
       "@nuxt/types"

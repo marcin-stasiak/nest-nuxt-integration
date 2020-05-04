@@ -1,5 +1,6 @@
+import { Configuration } from '@nuxt/types';
 
-export default {
+const config: Configuration = {
   mode: 'universal',
   srcDir: './client/',
   buildDir: './dist/client/',
@@ -61,3 +62,5 @@ export default {
     }
   }
 }
+
+export default config;

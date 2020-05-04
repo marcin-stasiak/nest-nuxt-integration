@@ -1,0 +1,9 @@
+{
+  "watch": [
+    "client",
+    "server",
+    "nuxt.config.ts"
+  ],
+  "ext": "js ts vue",
+  "exec": "ts-node -r tsconfig-paths/register server/main.ts"
+}

@@ -10,8 +10,12 @@
 # install dependencies
 $ npm install
 
-# serve with hot reload at localhost:3000
+# serve together with hot reload at port 3000
 $ npm run dev
+
+# serve separately with hot reload at port 3000 and 3001 
+$ npm run dev:server
+$ npm run dev:client
 
 # build for production and launch server
 $ npm run build
