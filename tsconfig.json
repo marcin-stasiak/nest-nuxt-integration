@@ -16,11 +16,12 @@
     "outDir": "./dist",
     "types": [
       "@types/node",
-      "@nuxt/types"
+      "@nuxt/types",
+      "@nuxtjs/axios"
     ]
   },
   "include": [
     "server/**/*",
-    "client/**/*"
+    "nuxt.config.ts"
   ]
 }
