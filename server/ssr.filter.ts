@@ -1,5 +1,6 @@
 import {ArgumentsHost, Catch, ExceptionFilter, HttpException, NotFoundException} from '@nestjs/common';
-import { Nuxt } from 'nuxt';
+import { Request, Response } from 'express';
+import {Nuxt} from 'nuxt';
 
 
 @Catch(NotFoundException)
@@ -12,20 +13,11 @@ export class SSRFilter implements ExceptionFilter {
 
   public async catch(exception: HttpException, host: ArgumentsHost) {
     const ctx = host.switchToHttp();
-    const response = ctx.getResponse();
-    const request = ctx.getRequest();
-    const status = exception.getStatus();
+    const response = ctx.getResponse<Response>();
+    const request = ctx.getRequest<Request>();
 
-    if (status === 404) {
-      if (!response.headersSent) {
-        await this.nuxt.render(request, response);
-      }
-    } else {
-      response.status(status).json({
-        statusCode: status,
-        timestamp: new Date().toISOString(),
-        path: request.url,
-      });
+    if (!response.headersSent) {
+      await this.nuxt.render(request, response);
     }
   }
 }
