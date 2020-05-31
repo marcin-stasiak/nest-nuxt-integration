@@ -3,10 +3,11 @@ import {BundleBuilder} from '@nuxt/webpack';
 import {Builder, Nuxt,} from 'nuxt';
 
 import {AppModule} from './app.module';
-import {NuxtFilter} from './nuxt.filter';
+import {SSRFilter} from './ssr.filter';
 import config from '../nuxt.config';
 
-async function bootstrap() {
+
+(async () => {
   const client = new Nuxt(config);
   const server = await NestFactory.create(AppModule);
 
@@ -16,9 +17,7 @@ async function bootstrap() {
     client.ready();
   }
 
-  server.useGlobalFilters(new NuxtFilter(client));
+  server.useGlobalFilters(new SSRFilter(client));
 
   await server.listen(3000);
-}
-
-bootstrap();
+})();
